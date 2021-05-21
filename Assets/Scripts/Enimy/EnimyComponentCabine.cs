@@ -44,12 +44,14 @@ public class EnimyComponentCabine : MonoBehaviour, DistanceCheckListener, Collis
 
     public void onInsaneDistance()
     {
+        Debug.Log("Insane ");
         DestroyElement();
     }
 
 
     public void onCollide()
     {
+        Debug.Log("Collide ");
         DestroyElement();
     }
 
@@ -78,8 +80,12 @@ public class EnimyComponentCabine : MonoBehaviour, DistanceCheckListener, Collis
         {
             var velocity = GetComponent<Rigidbody2D>().velocity.y;
             float impulse = 0f;
-           
-            if (velocity < 0)
+            if (velocity <= 0)
+            {
+                impulse = Mathf.Abs(previousYVelocity - velocity > 0 ? velocity : 0) * 1.3F;
+            }
+
+            /*if (velocity < 0)
             {
 
                 impulse = Mathf.Abs((previousYVelocity - velocity < 0 ? velocity : 0) / 1.5f);
@@ -92,7 +98,7 @@ public class EnimyComponentCabine : MonoBehaviour, DistanceCheckListener, Collis
                 previousYVelocity = velocity;
             }
            
-            impulse += 0.1f;
+            impulse += 0.1f;*/
 
             var engine1 = transform.GetChild(0).GetComponent<EnimyComponentEngine>();
             var engine2 = transform.GetChild(1).GetComponent<EnimyComponentEngine>();

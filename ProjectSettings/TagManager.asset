@@ -44,14 +44,17 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: location
-    uniqueID: 1694365457
+  - name: sky
+    uniqueID: 2936094651
     locked: 0
   - name: enimy
     uniqueID: 2005545033
     locked: 0
   - name: player
     uniqueID: 2602863415
+    locked: 0
+  - name: location
+    uniqueID: 1694365457
     locked: 0
   - name: UI
     uniqueID: 1498116507

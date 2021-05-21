@@ -715,9 +715,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listener: {fileID: 3705687755523656063}
-  minAltitude: 6
-  maxAltitude: 6.2
-  insaneDistance: 15
+  minAltitude: 25
+  maxAltitude: 90
+  insaneDistance: 100
 --- !u!114 &3705687754823048404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1191,7 +1191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  chaseDistance: 10
+  chaseDistance: 15
   drops:
   - {fileID: 5444516170273350556, guid: 8d379e479f9c10542a5228c00490cadb, type: 3}
   - {fileID: 9080450429789722762, guid: 901a502d3f57d1141ad0e661df6a7674, type: 3}
@@ -1230,17 +1230,17 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f8aac55e4e4871a4485c610f4fca8bb7, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.696
+  m_Pitch: -1.46
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
+  DopplerLevel: 0.97
+  MinDistance: 0.1
+  MaxDistance: 0.2
+  Pan2D: -0.02
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -1250,22 +1250,22 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
+      value: 0.83187866
+      inSlope: -2.0008
+      outSlope: -2.0008
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     - serializedVersion: 3
-      time: 1
+      time: 0.9316101
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: -0.5002
+      outSlope: -0.5002
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -1274,7 +1274,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.913
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1304,7 +1304,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.541
       inSlope: 0
       outSlope: 0
       tangentMode: 0

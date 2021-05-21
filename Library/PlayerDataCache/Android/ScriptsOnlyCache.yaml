@@ -96,6 +96,8 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 638}
+    - Class: 114
       Script: {instanceID: 11292}
     - Class: 114
       Script: {instanceID: 11294}
@@ -182,6 +184,12 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 156049354
+      Script: {instanceID: 0}
+    - Class: 483693784
+      Script: {instanceID: 0}
+    - Class: 1839735485
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -516,7 +524,7 @@ ScriptsOnlyBuild:
     className: Weapon
   - hash:
       serializedVersion: 2
-      Hash: e7357d1a0603bd9c699dc3f63f5b3248
+      Hash: 74f6595fafbe43677a2c475157fee763
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Menu

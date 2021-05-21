@@ -28,8 +28,11 @@ public class DistanceCheck : MonoBehaviour
             listener.GetComponent<DistanceCheckListener>().onMaxDistance();
         }
 
-        if(distance > insaneDistance)
+        if (distance > insaneDistance)
+        {
             listener.GetComponent<DistanceCheckListener>().onInsaneDistance();
+            Debug.Log("Insane " + distance);
+        }
         if(distance < 0.02)
             listener.GetComponent<CollisionListener>().onCollide();
     }

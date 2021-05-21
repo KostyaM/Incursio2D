@@ -59,12 +59,15 @@ public class Bomb : MonoBehaviour
         var distanceToObj = Mathf.Pow(Mathf.Pow(obj.transform.position.x - transform.position.x, 2) + Mathf.Pow(obj.transform.position.y - transform.position.y, 2), 0.5f);     
         var distanceСoefficient = (fieldOfImpact - distanceToObj) / fieldOfImpact;
 
+        if (obj.gameObject.tag == "Player")
+            return;
+
         if (rigibody != null)
         {
             var direction = obj.transform.position - transform.position;
             rigibody.AddForce(direction * (force * distanceСoefficient));
         }
-        
+       
         var damageListener = obj.GetComponent<DamageableComponent>();
         if (damageListener != null)
         {
