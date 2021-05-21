@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Stat : MonoBehaviour, HealthListener, WeaponListener, EnimyKillListener
+public class Stat : MonoBehaviour, HealthListener, WeaponListener, EnimyKillListener, GameStageListener
 {
 
     public static int killCount = 0;
-    public TMPro.TextMeshProUGUI healthPreview, bulletPreview, hePreview, killPreview;
+    public TMPro.TextMeshProUGUI healthPreview, bulletPreview, hePreview, killPreview, levelPreview, timer;
 
     private void Start()
     {
@@ -31,7 +29,23 @@ public class Stat : MonoBehaviour, HealthListener, WeaponListener, EnimyKillList
 
     public void setHealth(int value, int full)
     {
-        healthPreview.text =  value.ToString();
+        healthPreview.text = value.ToString();
     }
 
+    public void OnTimerTick(int minutes, int seconds)
+    {
+        timer.text = string.Format("{0}:{1}", GetPrettyNumbers(minutes), GetPrettyNumbers(seconds));
+    }
+
+    public void OnLevelChanged(string level)
+    {
+        levelPreview.text = string.Format("LVL {0}", level);
+    }
+
+    private string GetPrettyNumbers(int number)
+    {   
+        if (number > 9)
+            return number.ToString();
+        return string.Format("0{0}", number);
+    }
 }

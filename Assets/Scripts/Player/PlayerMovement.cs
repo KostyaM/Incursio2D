@@ -22,8 +22,9 @@ public class PlayerMovement : DamageableComponent, CollisionListener
         Destroy(gameObject, delay);
     }
 
-    private void Start()
+    void Start()
     {
+        OnStart();
         jumnButton.onClick.AddListener(Jump);
     }
 
@@ -48,13 +49,15 @@ public class PlayerMovement : DamageableComponent, CollisionListener
 
        transform.Translate(movement * Time.deltaTime * movementSpeed * (isFacingLeft ? 1 : -1));
 
-        if (Input.GetButtonDown("Jump") && !isJumping) {
+        if (Input.GetButtonDown("Jump")) {
             Jump();
         }
     }
 
     private void Jump()
     {
+        if (isJumping)
+            return;
         gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
     }
 

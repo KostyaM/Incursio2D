@@ -42,19 +42,23 @@ public class Weapon : MonoBehaviour
     public void addHe(int count)
     {
         heCount += count;
-        /*weaponBar.GetComponent<WeaponPreview>().onHeChange(heCount);*/
+        weaponBar.GetComponent<WeaponListener>().onHeChange(heCount);
     }
 
     // Update is called once per frame
     void Update()
     {
-        /*if (Menu.isGamePaused)
-            return;*/
+        if (Menu.isGamePaused)
+            return;
         HandleAiming();
         /*if (Input.GetButtonDown("Fire1")) 
         {
             Shoot();
         }*/
+        if(Input.GetKeyDown(KeyCode.KeypadEnter))
+        {
+            Shoot();
+        }
         /*if (Input.GetButtonDown("Fire2"))
         {
             ThrowBomb();
@@ -67,6 +71,8 @@ public class Weapon : MonoBehaviour
 
     private void ThrowBomb()
     {
+        if (GameApplication.GetInstance().isCountdownRunning)
+            return;
         if (heCount == 0)
             return;
 
@@ -84,6 +90,8 @@ public class Weapon : MonoBehaviour
     }
     public void Shoot() 
     {
+        if (GameApplication.GetInstance().isCountdownRunning)
+            return;
         firebutton.interactable = false;
         if (bulletsCount == 0)
         {

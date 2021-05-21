@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - FxTemporaire
+  - Ground
+  - DeathZone
   layers:
   - Default
   - TransparentFX
@@ -13,7 +16,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Ground
   - 
   - 
   - 
@@ -38,9 +41,21 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: location
+    uniqueID: 1694365457
+    locked: 0
   - name: player
     uniqueID: 2602863415
     locked: 0
-  - name: Default
-    uniqueID: 0
+  - name: UI
+    uniqueID: 1498116507
+    locked: 0
+  - name: menu
+    uniqueID: 916624509
+    locked: 0
+  - name: New Layer
+    uniqueID: 2005545033
     locked: 0

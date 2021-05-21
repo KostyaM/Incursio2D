@@ -1,33 +1,32 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public abstract class DamageableComponent : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject healthBarObj;
-    public int health;
-    public int remainHealth;
+    public int health, remainHealth;
     public bool isDestroyed = false;
 
-    private void Start()
+
+    protected void OnStart()
     {
-        remainHealth = health;
         if (healthBarObj != null)
         {
-            /*var healthBar = healthBarObj.GetComponent<HealthPreview>();
-            healthBar.setHealth(remainHealth, health);*/
+            var healthBar = healthBarObj.GetComponent<HealthListener>();
+            healthBar.setHealth(remainHealth, health);
         }
+        Debug.Log("Health " + health);
     }
 
     public void Damage(int damage, float delay = 0f)
     {
-        remainHealth-=damage;
+        remainHealth = remainHealth - damage;
         if (healthBarObj != null)
         {
-           /* var healthBar = healthBarObj.GetComponent<HealthPreview>();
-            healthBar.setHealth(remainHealth, health);*/
+            var healthBar = healthBarObj.GetComponent<HealthListener>();
+            healthBar.setHealth(remainHealth, health);
         }
+       
         if (remainHealth <= 0)
         {
             remainHealth = 0;
