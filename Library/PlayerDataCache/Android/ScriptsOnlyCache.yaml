@@ -24,9 +24,14 @@ ScriptsOnlyBuild:
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
+    - UnityEditor.Tilemaps.GridBrush
+    - UnityEditor.Tilemaps.GridBrushEditor
+    - UnityEditor.Tilemaps.GridPaintPaletteClipboard
+    - UnityEditor.Tilemaps.GridPaintPaletteWindow
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
     - UnityEditor.Tilemaps.GridPalettes
+    - UnityEditor.Tilemaps.PaintableSceneViewGrid
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
@@ -76,6 +81,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
+    - Class: 68
+      Script: {instanceID: 0}
     - Class: 70
       Script: {instanceID: 0}
     - Class: 81
@@ -91,69 +98,69 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11292}
     - Class: 114
-      Script: {instanceID: 11314}
+      Script: {instanceID: 11294}
     - Class: 114
-      Script: {instanceID: 11320}
+      Script: {instanceID: 11316}
     - Class: 114
-      Script: {instanceID: 11912}
+      Script: {instanceID: 11322}
     - Class: 114
-      Script: {instanceID: 11972}
+      Script: {instanceID: 11914}
     - Class: 114
-      Script: {instanceID: 12050}
+      Script: {instanceID: 11974}
     - Class: 114
-      Script: {instanceID: 12188}
+      Script: {instanceID: 12052}
     - Class: 114
-      Script: {instanceID: 12252}
+      Script: {instanceID: 12190}
     - Class: 114
-      Script: {instanceID: 12322}
+      Script: {instanceID: 12254}
     - Class: 114
-      Script: {instanceID: 12350}
+      Script: {instanceID: 12324}
     - Class: 114
-      Script: {instanceID: 12404}
+      Script: {instanceID: 12352}
     - Class: 114
-      Script: {instanceID: 12534}
+      Script: {instanceID: 12406}
     - Class: 114
-      Script: {instanceID: 12560}
+      Script: {instanceID: 12536}
     - Class: 114
-      Script: {instanceID: 12652}
+      Script: {instanceID: 12562}
     - Class: 114
-      Script: {instanceID: 12840}
+      Script: {instanceID: 12654}
     - Class: 114
-      Script: {instanceID: 12858}
+      Script: {instanceID: 12842}
     - Class: 114
-      Script: {instanceID: 13006}
+      Script: {instanceID: 12860}
     - Class: 114
-      Script: {instanceID: 13086}
+      Script: {instanceID: 13008}
     - Class: 114
-      Script: {instanceID: 13114}
+      Script: {instanceID: 13088}
     - Class: 114
-      Script: {instanceID: 13440}
+      Script: {instanceID: 13116}
     - Class: 114
-      Script: {instanceID: 13452}
+      Script: {instanceID: 13442}
     - Class: 114
-      Script: {instanceID: 13472}
+      Script: {instanceID: 13454}
     - Class: 114
-      Script: {instanceID: 13504}
+      Script: {instanceID: 13474}
     - Class: 114
-      Script: {instanceID: 13692}
+      Script: {instanceID: 13506}
     - Class: 114
-      Script: {instanceID: 13752}
+      Script: {instanceID: 13694}
     - Class: 114
-      Script: {instanceID: 13794}
+      Script: {instanceID: 13754}
     - Class: 114
-      Script: {instanceID: 13898}
+      Script: {instanceID: 13796}
     - Class: 114
-      Script: {instanceID: 14194}
+      Script: {instanceID: 13902}
     - Class: 114
-      Script: {instanceID: 14306}
+      Script: {instanceID: 14198}
     - Class: 114
-      Script: {instanceID: 14370}
+      Script: {instanceID: 14310}
     - Class: 114
-      Script: {instanceID: 14542}
+      Script: {instanceID: 14374}
     - Class: 114
-      Script: {instanceID: 14584}
+      Script: {instanceID: 14546}
     - Class: 114
-      Script: {instanceID: 14600}
+      Script: {instanceID: 14602}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -183,6 +190,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Image
+  - hash:
+      serializedVersion: 2
+      Hash: 7072231382eb3c4871b3dd75ad0227e1
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Slider
   - hash:
       serializedVersion: 2
       Hash: ce669872a2be11bc686ea22961d8a3bb
@@ -987,12 +1000,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalEmitter
-  - hash:
-      serializedVersion: 2
-      Hash: 7072231382eb3c4871b3dd75ad0227e1
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Slider
   - hash:
       serializedVersion: 2
       Hash: 24e83878e3db6727f082cfceec3fc957

@@ -29,6 +29,11 @@ public class Stat : MonoBehaviour, HealthListener, WeaponListener, EnimyKillList
 
     public void setHealth(int value, int full)
     {
+        if(value < 0)
+        {
+            healthPreview.text = 0.ToString();
+            return;
+        }
         healthPreview.text = value.ToString();
     }
 

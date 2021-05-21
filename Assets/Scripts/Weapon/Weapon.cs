@@ -81,7 +81,7 @@ public class Weapon : MonoBehaviour
             return;
         var bulletPoint = weapon.GetChild(0);
         var bomb = Instantiate(bombPrefab, bulletPoint.position, bulletPoint.rotation);
-
+        lastThrowBombMillis = now;
         var x = throwForce * Mathf.Cos(weaponAngel * Mathf.Deg2Rad);
         var y = throwForce * Mathf.Sin(weaponAngel * Mathf.Deg2Rad);
         bomb.GetComponent<Rigidbody2D>().AddForce(new Vector2(x, y), ForceMode2D.Impulse);

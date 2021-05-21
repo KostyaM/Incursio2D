@@ -66,7 +66,7 @@ public class GameApplication : MonoBehaviour, EnimyKillListener
         var timePassed = Time.deltaTime;
         sessionLength -= timePassed;
         countdown -= timePassed;
-        countdownText.text = ((int)countdown).ToString();
+        countdownText.text = ((int)countdown + 1).ToString();
         if (countdown <= 0)
         {
             countdownMenu.SetActive(false);

@@ -7,6 +7,8 @@ public class Menu : MonoBehaviour, DefeatListener
     public static bool isGamePaused = false;
     public GameObject pauseMenuUi;
     public GameObject defeatMenuUi;
+    public GameObject stat;
+    public GameObject controls;
     public TextMeshProUGUI score;
 
     // Update is called once per frame
@@ -29,6 +31,8 @@ public class Menu : MonoBehaviour, DefeatListener
 
     public void onDefeat()
     {
+        stat.SetActive(false);
+        controls.SetActive(false);
         defeatMenuUi.SetActive(true);
         score.text = "Your score " + Stat.killCount.ToString();
     }
@@ -37,6 +41,8 @@ public class Menu : MonoBehaviour, DefeatListener
     public void Pause()
     {
         AudioListener.volume = 0.1f;
+        stat.SetActive(false);
+        controls.SetActive(false);
         pauseMenuUi.SetActive(true);
         Time.timeScale = 0f;
         isGamePaused = true;
@@ -46,6 +52,8 @@ public class Menu : MonoBehaviour, DefeatListener
     {
         AudioListener.volume = 1f;
         pauseMenuUi.SetActive(false);
+        stat.SetActive(true);
+        controls.SetActive(true);
         Time.timeScale = 1f;
         isGamePaused = false;
         GameApplication.GetInstance().SetCountdown();
